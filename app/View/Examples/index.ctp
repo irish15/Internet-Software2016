@@ -17,7 +17,6 @@
 			$this->Html->link($timeline['user']['screen_name'],
 			'http://www.twitter.com/'.$timeline['user']['screen_name']).
 			$timeline['text'].'<br>';
-
 	}
 
 

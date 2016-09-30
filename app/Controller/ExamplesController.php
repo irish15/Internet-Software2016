@@ -97,12 +97,9 @@ class ExamplesController extends AppController {
  public function login(){
    // ユーザの認証情報を取得（ログイン済みかどうかを判定）
    $user = $this->Auth->user();
-
    // Cookie ログインを処理するならこの辺りで・・
    $cookieValue = $this->Cookie->read('id');
    //  第一引数を追加しないとダメなようです
-   //print_r($cookieValue);
-  // print_r($user);
    // ログイン済みであれば index に遷移
    if(isset($cookieValue)){
      $user = $this->User->read(null, $cookieValue);
@@ -136,7 +133,7 @@ class ExamplesController extends AppController {
 
 
    // Posts テーブル内の全ての情報を読み出す
-   $posts = $this->Post->find('all');
+   //$posts = $this->Post->find('all');
 
    // View に各変数を引き渡す
    $this->set(compact(
